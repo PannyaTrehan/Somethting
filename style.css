@@ -1,0 +1,59 @@
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+.square img {
+    width: 72.5%;
+}
+
+#blackRemovedPieces,
+#whiteRemovedPieces {
+    display: grid;
+    grid-template-columns: repeat(1, 75px); /* Adjust the number of columns and size as needed */
+    grid-row-gap: 0;
+}
+
+.removedSquareBlack,
+.removedSquareWhite {
+    width: 75px; /* Adjust the size as needed */
+    height: 75px; /* Adjust the size as needed */
+    border: 1px solid #000; /* Add a border for visibility */
+}
+
+img.attacked {
+    width:90%;
+}
+
+img.other {
+    width: 75%;
+}
+.even {
+    background-color: rgba(119,153,84,255);
+}
+.odd {
+    background-color: rgba(233,237,204,255);
+}
+#gameContainer{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+#boardContainer{
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    width: 550px;
+    margin: auto;
+}
+#removedAndBoard{
+    display: flex;
+}
+#removedPiecesContainer {
+    display: flex;
+}
+

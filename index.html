@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Chess</h1>
+        <div id="boardContainer">
+            <script>
+                let x = true;
+                for (let i=0; i < 64; i++) {
+                    const className = x ? 'even' : 'odd';
+                    document.write(`<div squareIndex="${i}" class="square ${className}"></div>\n`);
+
+                    if ((i + 1) % 8 != 0) {
+                        x = !x;
+                    }
+                }
+            </script>
+        </div>
+        <h2 id="statusText"></h2> <!--displays which players turn-->
+        <button id="restartBtn">Restart</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
